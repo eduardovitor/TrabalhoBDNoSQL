@@ -1,0 +1,78 @@
+use trabalho
+
+db.createCollection("alunos", {
+	validator: {
+    $jsonSchema: {
+    bsonType: "object",
+	required: [
+		"cod",
+		"cpf",
+		"nome",
+		"endereco",
+		"foto",
+		"data_matricula",
+		"turma",
+		"disciplinas",
+	],
+	properties: {
+		cod: {
+			bsonType: "int",
+		},
+		cpf: {
+			bsonType: "int",
+		},
+		nome: {
+			bsonType: "string",
+		},
+		endereco: {
+			bsonType: "array",
+		},
+		data_matricula: {
+			bsonType: "string",
+		},
+		turma: {
+			bsonType: "string",
+		},
+		disciplinas: {
+			bsonType: "array",
+		}
+	  }
+     }
+   }
+})
+
+
+db.createCollection("professores", {
+    validator: {
+    $jsonSchema: {
+	bsonType: 'object',
+	required: [
+		'cod',
+		'cpf',
+		'nome',
+		'endereco',
+		'foto',
+		'disciplinas',
+		'turma'
+	],
+	properties: {
+		cod: {
+			bsonType: 'int',
+		},
+		cpf: {
+			bsonType: 'int', 
+		},
+		nome: {
+			bsonType: 'string',
+		},
+		endereco: {
+			bsonType: 'array',
+		},
+		disciplinas: {
+			bsonType: 'array',
+		}
+	  }
+    }
+  }
+})
+
