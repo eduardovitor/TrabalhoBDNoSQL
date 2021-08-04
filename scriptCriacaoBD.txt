@@ -5,7 +5,6 @@ db.createCollection("alunos", {
     $jsonSchema: {
     bsonType: "object",
 	required: [
-		"cod",
 		"cpf",
 		"nome",
 		"endereco",
@@ -15,9 +14,6 @@ db.createCollection("alunos", {
 		"disciplinas",
 	],
 	properties: {
-		cod: {
-			bsonType: "int",
-		},
 		cpf: {
 			bsonType: "int",
 		},
@@ -47,7 +43,6 @@ db.createCollection("professores", {
     $jsonSchema: {
 	bsonType: 'object',
 	required: [
-		'cod',
 		'cpf',
 		'nome',
 		'endereco',
@@ -56,9 +51,6 @@ db.createCollection("professores", {
 		'turma'
 	],
 	properties: {
-		cod: {
-			bsonType: 'int',
-		},
 		cpf: {
 			bsonType: 'int', 
 		},
