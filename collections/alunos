@@ -1,0 +1,191 @@
+[{
+  "_id": 1,
+  "cpf": 66432900712,
+  "nome": "Julia Almeida",
+  "endereco": {
+    "Rua": "São Pedro",
+    "Bairro": "Caititus",
+    "Número": "445",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "10/01/2021",
+  "turma": "Letras vespertino 3º período",
+  "disciplinas": [
+    "História da língua portuguesa",
+    "Latim 1",
+    "Literatura 1",
+    "Comunicação",
+    "Didática 1"
+  ]
+},{
+  "_id": 2,
+  "cpf": 85300154654,
+  "nome": "Marcos Silva",
+  "endereco": {
+    "Rua": "São Bernardino",
+    "Bairro": "Brasília",
+    "Número": "321",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "13/01/2021",
+  "turma": "Sistemas de informação noturno 3º período",
+  "disciplinas": [
+    "Introdução a bancos de dados",
+    "Sistemas operacionais",
+    "Estrutura de dados",
+    "Estatística aplicada",
+    "Inglês instrumental"
+  ]
+},{
+  "_id": 3,
+  "cpf": 72280498482,
+  "nome": "César dos Santos Farias",
+  "endereco": {
+    "Rua": "Penha de Oliveira",
+    "Bairro": "Cavaco",
+    "Número": "80",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "16/01/2021",
+  "turma": "Administração pública 2º período",
+  "disciplinas": [
+    "Orçamento 1",
+    "Empreendedorismo",
+    "Métodos e técnicas",
+    "Gestão de pessoas",
+    "Oratória"
+  ]
+},{
+  "_id": 4,
+  "cpf": 93727199534,
+  "nome": "Joana Darque Filomena",
+  "endereco": {
+    "Rua": "Eraldo Correia",
+    "Bairro": "Centro",
+    "Número": "23",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "19/01/2021",
+  "turma": "Química bacharelado",
+  "disciplinas": [
+    "Reações químicas",
+    "Química orgânica",
+    "Elementos químicos",
+    "Cálculo 1",
+    "Metodologia científica"
+  ]
+},{
+  "_id": 5,
+  "cpf": 52720999281,
+  "nome": "João Deivid Vieira",
+  "endereco": {
+    "Rua": "Quitéria Soares",
+    "Bairro": "Cacimbas",
+    "Número": "45",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "21/01/2021",
+  "turma": "Educação física",
+  "disciplinas": [
+    "Corpo humano",
+    "Doenças 1",
+    "Esportes 1",
+    "Técnicas de treinamento",
+    "Didática"
+  ]
+},{
+  "_id": 6,
+  "cpf": 30884111270,
+  "nome": "Maria Quitéria Alcântara",
+  "endereco": {
+    "Rua": "Governador Gomes Barbosa",
+    "Bairro": "Planalto",
+    "Número": "33",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "23/01/2021",
+  "turma": "Ciências biológicas 3º período",
+  "disciplinas": [
+    "Bioquímica",
+    "Aminoácidos",
+    "Citologia",
+    "Leis de mendel",
+    "Teoria da evolução"
+  ]
+},{
+  "_id": 7,
+  "cpf": 49261323973,
+  "nome": "José Antônio dos Santos Ribeiro",
+  "endereco": {
+    "Rua": "Governadora Márcia Cabral",
+    "Bairro": "Santa Edwiges",
+    "Número": "540",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "25/01/2021",
+  "turma": "Matemática licenciatura 2º período",
+  "disciplinas": [
+    "Teoremas",
+    "Cálculo 1",
+    "História da matemática",
+    "Leis de Towl",
+    "Equações"
+  ]
+},{
+  "_id": 8,
+  "cpf": 72050014548,
+  "nome": "José Gustavo da Silva",
+  "endereco": {
+    "Rua": "Denis Correia",
+    "Bairro": "Santa Edwiges",
+    "Número": "600",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "27/01/2021",
+  "turma": "Letras inglês 5º período",
+  "disciplinas": [
+    "História da língua inglesa",
+    "Construções gramaticais",
+    "Latim 1",
+    "Cultura inglesa",
+    "Didática"
+  ]
+},{
+  "_id": 9,
+  "cpf": 61052814508,
+  "nome": "Antonio Guilherme Bordeaux",
+  "endereco": {
+    "Rua": "Maria Almedia",
+    "Bairro": "Bom Sucesso",
+    "Número": "700",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "28/01/2021",
+  "turma": "Letras inglês 5º período",
+  "disciplinas": [
+    "História da língua inglesa",
+    "Construções gramaticais",
+    "Latim 1",
+    "Cultura inglesa",
+    "Didática"
+  ]
+},{
+  "_id": 10,
+  "cpf": 18057810508,
+  "nome": "Amanda Gil Destra",
+  "endereco": {
+    "Rua": "Kacique Marques",
+    "Bairro": "Bom Sucesso",
+    "Número": "700",
+    "Cidade": "Arapiraca"
+  },
+  "data_matricula": "28/01/2021",
+  "turma": "Letras inglês 5º período",
+  "disciplinas": [
+    "História da língua inglesa",
+    "Construções gramaticais",
+    "Latim 1",
+    "Cultura inglesa",
+    "Didática"
+  ]
+}]

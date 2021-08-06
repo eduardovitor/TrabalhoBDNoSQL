@@ -1,0 +1,76 @@
+[{
+  "_id": 1,
+  "cpf": 56361543230,
+  "nome": "Kelly dos Santos",
+  "endereco": {
+    "Rua": "Avenida Ceci Cunha",
+    "Bairro": "Planalto",
+    "Número": "320",
+    "Cidade": "Arapiraca"
+  },
+  "formacao": "Letras inglês",
+  "disciplinas": [
+    "História da língua inglesa",
+    "Construções gramaticais"
+  ]
+},{
+  "_id": 2,
+  "cpf": 35661606325,
+  "nome": "David Vieira Feitosa",
+  "endereco": {
+    "Rua": "Pau Nunes",
+    "Bairro": "Centro",
+    "Número": "450",
+    "Cidade": "Arapiraca"
+  },
+  "formacao": "Química",
+  "disciplinas": [
+    "Química orgânica",
+    "Química industrial"
+  ]
+},{
+  "_id": 3,
+  "cpf": 14293833775,
+  "nome": "Elaine Cristine Felix",
+  "endereco": {
+    "Rua": "Fernando Gonçalves",
+    "Bairro": "Centro",
+    "Número": "712",
+    "Cidade": "Arapiraca"
+  },
+  "formacao": "Educação física",
+  "disciplinas": [
+    "Corpo humano",
+    "Metodologia científica"
+  ]
+},{
+  "_id": 4,
+  "cpf": 40248884477,
+  "nome": "Isabel Ferrão Peixoto",
+  "endereco": {
+    "Rua": "Júlio menino",
+    "Bairro": "Primavera",
+    "Número": "811",
+    "Cidade": "Arapiraca"
+  },
+  "formacao": "Administração pública",
+  "disciplinas": [
+    "Introdução a Administração",
+    "Método administrativo"
+  ]
+},{
+  "_id": 5,
+  "cpf": 86936675286,
+  "nome": "Matheus Amorim Silva",
+  "endereco": {
+    "Rua": "Camaleão amarelo",
+    "Bairro": "Primavera",
+    "Número": "900",
+    "Cidade": "Arapiraca"
+  },
+  "formacao": "Matemática",
+  "disciplinas": [
+    "Teoremas",
+    "Lei de Towl"
+  ]
+}]

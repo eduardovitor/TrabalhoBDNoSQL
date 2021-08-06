@@ -46,7 +46,7 @@ db.createCollection("professores", {
 		"nome",
 		"endereco",
 		"disciplinas",
-		"formacao"
+		"turma"
 	],
 	properties: {
 		cpf: {
@@ -58,7 +58,7 @@ db.createCollection("professores", {
 		endereco: {
 			bsonType: "object",
 		},
-		formacao: {
+		turma: {
 			bsontype: "string"
 		}
 		disciplinas: {
