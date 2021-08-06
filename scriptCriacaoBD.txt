@@ -8,20 +8,19 @@ db.createCollection("alunos", {
 		"cpf",
 		"nome",
 		"endereco",
-		"foto",
 		"data_matricula",
 		"turma",
 		"disciplinas",
 	],
 	properties: {
 		cpf: {
-			bsonType: "int",
+			bsonType: "double",
 		},
 		nome: {
 			bsonType: "string",
 		},
 		endereco: {
-			bsonType: "array",
+			bsonType: "object",
 		},
 		data_matricula: {
 			bsonType: "string",
@@ -41,27 +40,29 @@ db.createCollection("alunos", {
 db.createCollection("professores", {
     validator: {
     $jsonSchema: {
-	bsonType: 'object',
+	bsonType: "object",
 	required: [
-		'cpf',
-		'nome',
-		'endereco',
-		'foto',
-		'disciplinas',
-		'turma'
+		"cpf",
+		"nome",
+		"endereco",
+		"disciplinas",
+		"turma"
 	],
 	properties: {
 		cpf: {
-			bsonType: 'int', 
+			bsonType: "double", 
 		},
 		nome: {
-			bsonType: 'string',
+			bsonType: "string",
 		},
 		endereco: {
-			bsonType: 'array',
+			bsonType: "object",
 		},
+		turma: {
+			bsontype: "string"
+		}
 		disciplinas: {
-			bsonType: 'array',
+			bsonType: "array",
 		}
 	  }
     }
