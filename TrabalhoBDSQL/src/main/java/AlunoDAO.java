@@ -1,7 +1,7 @@
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
+import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
 
+import javax.swing.text.Document;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,17 +28,25 @@ public class AlunoDAO {
                 return true;
             }else
                 System.out.println("Não foi possível conectar ao Banco de Dados.");
-        }catch
-
+                return false;
+        }catch(MongoException e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    public List<Aluno> selecionar(){
-        List<Aluno> alunos;
-        Aluno a;
+    public void mostrarTudo(){
         try{
             con.conectar();
-            alunos = new ArrayList<Aluno>();
-            
+            DB bd = con.getBanco();
+            DBCollection colecaoAluno = bd.getCollection("alunos");
+
+            DBCursor cursor = colecaoAluno.find();
+            while(cursor.hasNext()){
+                System.out.println(cursor.next());
+            }
+        }catch(MongoException e){
+            e.printStackTrace();
         }
     }
 }
