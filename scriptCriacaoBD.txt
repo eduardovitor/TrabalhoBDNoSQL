@@ -60,7 +60,7 @@ db.createCollection("professores", {
 		},
 		formacao: {
 			bsonType: "string",
-		}
+		},
 		disciplinas: {
 			bsonType: "array",
 		}
