@@ -1,6 +1,7 @@
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
+import com.mongodb.client.MongoDatabase;
 
 import java.util.List;
 
@@ -23,8 +24,8 @@ public class ConexaoBD{
         }
     }
 
-    public DB getBanco(){
-        return mongoClient.getDB("trabalho");
+    public MongoDatabase getBanco(){
+        return mongoClient.getDatabase("trabalho");
     }
 
     public static void main(String args[]){
