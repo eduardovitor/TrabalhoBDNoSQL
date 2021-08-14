@@ -7,18 +7,16 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
+/*
+public class ProfessorDAO {
 
-public class AlunoDAO {
-
-    //private Conexao test;
+    private ConexaoBD con;
 
     public void inserir(Aluno a){
         try{
-            if(true){
-                //MongoClient banco = new MongoClient("localhost", 27017);
-                MongoClient test = new MongoClient("localhost", 27017);
+            if(con.conectar()!=null){
                 System.out.println("Conectado ao Banco. Inserindo...");
-                MongoDatabase bd = test.getDatabase("trabalho");
+                MongoDatabase bd = con.getBanco();
                 MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
                 Document doc = new Document();
                 doc.append("id", a.getId());
@@ -27,7 +25,7 @@ public class AlunoDAO {
                 doc.append("data_matricula", a.getData_matricula());
                 doc.append("turma", a.getTurma());
                 doc.append("disciplinas", a.getDisciplinas());
-                doc.append("endereco", null);
+                doc.append("endereco", a.getEndereco());
                 colecaoAluno.insertOne(doc);
                 System.out.println("Aluno inserido com sucesso.");
             }else
@@ -39,8 +37,8 @@ public class AlunoDAO {
 
     public void mostrarTudo(){
         try{
-            MongoClient test = new MongoClient("localhost", 27017);
-            MongoDatabase bd = test.getDatabase("trabalho");
+            con.conectar();
+            MongoDatabase bd = con.getBanco();
             MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
 
             MongoCursor cursor = colecaoAluno.find().cursor();
@@ -51,7 +49,7 @@ public class AlunoDAO {
             e.printStackTrace();
         }
     }
-/*
+
     public void alterar(Aluno a){
         MongoDatabase bd = con.getBanco();
         MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
@@ -73,5 +71,7 @@ public class AlunoDAO {
         consulta.put("id", id);
         DeleteResult resultado = colecaoAluno.deleteMany(consulta);
         System.out.println("Número de documentos deletados: " + resultado.getDeletedCount());
-    }*/
+    }
 }
+
+}*/
