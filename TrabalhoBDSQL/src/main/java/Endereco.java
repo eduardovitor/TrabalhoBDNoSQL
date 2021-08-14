@@ -1,25 +1,15 @@
 public class Endereco {
 
-    private int id;
     private String rua;
     private String bairro;
     private String numero;
     private String cidade;
 
-    public Endereco(int id, String rua, String bairro, String numero, String cidade){
-        this.id = id;
+    public Endereco (String rua, String bairro, String numero, String cidade){
         this.rua = rua;
         this.cidade = cidade;
         this.bairro = bairro;
         this.numero = numero;
-    }
-
-    public int getId(){
-        return this.id;
-    }
-
-    public void setId(int id){
-        this.id = id;
     }
 
     public String getRua() {
