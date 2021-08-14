@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ConexaoBD{
 
-    private MongoClient mongoClient = null;
+    private MongoClient mongoClient;
 
     public MongoClient conectar(){
 
@@ -17,10 +17,6 @@ public class ConexaoBD{
         }catch(MongoException e){
             e.printStackTrace();
             return null;
-        }finally{
-            if(this.mongoClient!=null)
-                this.mongoClient.close();
-                return null;
         }
     }
 
@@ -29,7 +25,19 @@ public class ConexaoBD{
     }
 
     public static void main(String args[]){
-        ConexaoBD bd = new ConexaoBD();
-        bd.conectar();
+        Aluno teste = new Aluno();
+        teste.setId(42);
+        teste.setCpf(42.42);
+        teste.setNome("Arthur");
+        teste.setData_matricula("04/02/2042");
+        teste.setTurma("Guide");
+        teste.setEndereco(new Endereco(
+                42, "GoldHeart", "The End of The Universe", "42", "Galaxy")
+        );
+        teste.setDisciplinas(null);
+
+        AlunoDAO aux = new AlunoDAO();
+        aux.inserir(teste);
+        aux.mostrarTudo();
     }
 }

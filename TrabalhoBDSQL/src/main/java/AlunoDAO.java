@@ -25,7 +25,7 @@ public class AlunoDAO {
                 doc.append("turma", a.getTurma());
                 doc.append("disciplinas", a.getDisciplinas());
                 doc.append("endereco", a.getEndereco());
-                colecaoAluno.insert(doc);
+                colecaoAluno.insertOne(doc);
                 System.out.println("Aluno inserido com sucesso.");
             }else
                 System.out.println("Não foi possível conectar ao Banco de Dados.");
