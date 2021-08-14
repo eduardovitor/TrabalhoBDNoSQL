@@ -16,17 +16,16 @@ public class ProfessorDAO {
     private MongoClient con;
     public CodecRegistry pojoCodecRegistry = org.bson.codecs.configuration.CodecRegistries.fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), org.bson.codecs.configuration.CodecRegistries.fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
-    public void inserir(Aluno a){
+    public void inserir(Professor a){
         try{
             con = new MongoClient("localhost", 27017);
             System.out.println("Conectado ao Banco. Inserindo...");
             MongoDatabase bd = con.getDatabase("trabalho").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
+            MongoCollection<Document> colecaoProfessor = bd.getCollection("professores");
             Document doc = new Document();
             doc.append("_id", a.getId());
             doc.append("nome", a.getNome());
             doc.append("cpf", a.getCpf());
-            doc.append("data_matricula", a.getData_matricula());
             doc.append("turma", a.getTurma());
             doc.append("disciplinas", a.getDisciplinas());
             Document end = new Document();
@@ -35,8 +34,8 @@ public class ProfessorDAO {
             end.append("numero", a.getEndereco().getNumero());
             end.append("cidade", a.getEndereco().getCidade());
             doc.append("endereco", end);
-            colecaoAluno.insertOne(doc);
-            System.out.println("Aluno inserido com sucesso.");
+            colecaoProfessor.insertOne(doc);
+            System.out.println("Professor inserido com sucesso.");
         }catch(MongoException e){
             e.printStackTrace();
         }
@@ -46,9 +45,9 @@ public class ProfessorDAO {
         try{
             MongoClient test = new MongoClient("localhost", 27017);
             MongoDatabase bd = test.getDatabase("trabalho");
-            MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
+            MongoCollection<Document> colecaoProfessor = bd.getCollection("professores");
 
-            MongoCursor cursor = colecaoAluno.find().cursor();
+            MongoCursor cursor = colecaoProfessor.find().cursor();
             while(cursor.hasNext()){
                 System.out.println(cursor.next());
             }
@@ -57,17 +56,16 @@ public class ProfessorDAO {
         }
     }
 
-    public void alterar(Aluno a, Aluno n){
+    public void alterar(Professor a, Professor n){
         try{
             con = new MongoClient("localhost", 27017);
             System.out.println("Conectado ao Banco. Inserindo...");
             MongoDatabase bd = con.getDatabase("trabalho").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
+            MongoCollection<Document> colecaoAluno = bd.getCollection("professores");
             Document doc = new Document();
             doc.append("_id", a.getId());
             doc.append("nome", a.getNome());
             doc.append("cpf", a.getCpf());
-            doc.append("data_matricula", a.getData_matricula());
             doc.append("turma", a.getTurma());
             doc.append("disciplinas", a.getDisciplinas());
             Document end = new Document();
@@ -80,7 +78,6 @@ public class ProfessorDAO {
             doc2.append("_id", n.getId());
             doc2.append("nome", n.getNome());
             doc2.append("cpf", n.getCpf());
-            doc2.append("data_matricula", n.getData_matricula());
             doc2.append("turma", n.getTurma());
             doc2.append("disciplinas", n.getDisciplinas());
             Document end2 = new Document();
@@ -90,7 +87,7 @@ public class ProfessorDAO {
             end2.append("cidade", n.getEndereco().getCidade());
             doc2.append("endereco", end2);
             colecaoAluno.updateOne(doc, doc2);
-            System.out.println("Aluno atualizado com sucesso.");
+            System.out.println("Professor atualizado com sucesso.");
         }catch(MongoException e){
             e.printStackTrace();
         }
@@ -99,7 +96,7 @@ public class ProfessorDAO {
     public void deletar(int id){
         try{
             MongoDatabase bd = con.getDatabase("trabalho");
-            MongoCollection<Document> colecaoAluno = bd.getCollection("alunos");
+            MongoCollection<Document> colecaoAluno = bd.getCollection("professores");
             Document consulta = new Document();
             consulta.append("_id", id);
             DeleteResult resultado = colecaoAluno.deleteMany(consulta);
